@@ -47,11 +47,9 @@ devpod ssh <workspace-name>
 devpod delete <workspace-name>
 ```
 
-## Using the local feature
+## Using the local feature (check ./devcontainer/devcontainer.jason)
 ```json
-//...
 "postCreateCommand": "bash ./local-feature/install.sh"
-//...
 ```
 
 This runs `local-feature/install.sh`, which installs ZSH, fzf, zoxide, lsd, sets up Oh-My-Posh, and applies dotfiles.
