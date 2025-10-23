@@ -2,7 +2,7 @@
   "name": "k8s-dev",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "features": {
-    "../features/.devcontainer-features/src/kubectl-helm-minikube": {
+    "../features/kubectl-helm-minikube": {
       "version": "1.30.0",
       "helm": "none",
       "minikube": "none"

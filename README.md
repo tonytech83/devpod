@@ -13,15 +13,53 @@ What this PoC demonstrates:
 
 ```
 devpod/
-├── local-feature/                   # Custom feature: installs dotfiles
-│   ├── devcontainer-feature.json
-│   └── install.sh
-└── features/                        # Place additional features here (optional)
+├── features                        # Place additional features here (optional)
+│   ├── anaconda
+│   ├── aws-cli
+│   ├── azure-cli
+│   ├── common-utils
+│   ├── conda
+│   ├── desktop-lite
+│   ├── docker-in-docker
+│   ├── docker-outside-of-docker
+│   ├── dotnet
+│   ├── git
+│   ├── github-cli
+│   ├── git-lfs
+│   ├── go
+│   ├── hugo
+│   ├── java
+│   ├── kubectl-helm-minikube
+│   ├── nix
+│   ├── node
+│   ├── nvidia-cuda
+│   ├── oryx
+│   ├── php
+│   ├── powershell
+│   ├── python
+│   ├── ruby
+│   ├── rust
+│   ├── sshd
+│   └── terraform
+├── local-feature                   # Custom feature: installs dotfiles for example
+│   ├── devcontainer-feature.json
+│   └── install.sh
+└── README.md
 ```
 
 ## Quickstart
 
-Prerequisite: DevPod CLI installed (`curl -fsSL https://get.devpod.sh | sh`).
+Prerequisite:
+DevPod CLI installed
+```sh
+curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-amd64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
+```
+
+Clone the this repo
+```sh
+git clone https://github.com/tonytech83/devpod.git
+cd devpod
+```
 
 Run the DevPod:
 ```bash
@@ -35,15 +73,11 @@ devpod ssh <workspace-name>
 devpod delete <workspace-name>
 ```
 
-## Using the local feature in another project
-
-Add this repository as a feature source in your project's `devcontainer.json` and reference `./local-feature`:
+## Using the local feature
 ```json
-{
-  "features": {
-    "./local-feature": {}
-  }
-}
+...
+"postCreateCommand": "bash ./local-feature/install.sh"
+...
 ```
 
 This runs `local-feature/install.sh`, which installs ZSH, fzf, zoxide, lsd, sets up Oh-My-Posh, and applies dotfiles.
