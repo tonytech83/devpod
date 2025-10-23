@@ -14,33 +14,7 @@ What this PoC demonstrates:
 ```
 devpod/
 ├── features                        # Place additional features here (optional)
-│   ├── anaconda
-│   ├── aws-cli
-│   ├── azure-cli
-│   ├── common-utils
-│   ├── conda
-│   ├── desktop-lite
-│   ├── docker-in-docker
-│   ├── docker-outside-of-docker
-│   ├── dotnet
-│   ├── git
-│   ├── github-cli
-│   ├── git-lfs
-│   ├── go
-│   ├── hugo
-│   ├── java
-│   ├── kubectl-helm-minikube
-│   ├── nix
-│   ├── node
-│   ├── nvidia-cuda
-│   ├── oryx
-│   ├── php
-│   ├── powershell
-│   ├── python
-│   ├── ruby
-│   ├── rust
-│   ├── sshd
-│   └── terraform
+│   └── kubectl-helm-minikube
 ├── local-feature                   # Custom feature: installs dotfiles for example
 │   ├── devcontainer-feature.json
 │   └── install.sh
