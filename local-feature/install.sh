@@ -17,7 +17,7 @@ fi
 git clone --depth=1 https://github.com/tonytech83/dotfiles.git "$TARGET_DIR"
 cd "$TARGET_DIR"
 
-echo "🔧 Updating apt and installing required packages..."
+echo "Updating apt and installing required packages..."
 sudo apt-get update -y
 sudo apt-get install -y stow lsd fontconfig
 
