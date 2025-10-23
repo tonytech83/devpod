@@ -1,0 +1,8 @@
+{
+  "id": "dotfiles-setup",
+  "version": "1.0.0",
+  "name": "Dotfiles setup (ZSH installer)",
+  "description": "Clones TonyTech's dotfiles and installs ZSH configuration.",
+  "options": {},
+  "installsAfter": []
+}
